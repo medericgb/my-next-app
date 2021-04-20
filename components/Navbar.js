@@ -1,11 +1,13 @@
 import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar() {
   return (
     <nav className={styles.navbar_container}>
       <div className="logo">
-        <h2>Je suis la Navbar</h2>
+        {/* <img src="/_.png" alt="My logo" height="70" width="100" /> */}
+        <Image src="/_.png" height={70} width={100} alt="MyLogo" />
       </div>
       <div className={styles.menu}>
         <Link href="/">

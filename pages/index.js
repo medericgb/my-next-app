@@ -1,21 +1,19 @@
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
-// Comps
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Next Ninja App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Navbar />
-        <h1>Homepage</h1>
+      <main className={styles.container}>
+        <h1 className={styles.header_title}>Homepage</h1>
+        <Image src="/alpha_lego.jpg" height={220} width={500} alt="Lego" />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -43,8 +41,10 @@ export default function Home() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <a className={styles.btn}>
+          <Link href="/ninja">Voir les Ninjas</Link>
+        </a>
       </main>
-      <Footer />
     </div>
   );
 }
